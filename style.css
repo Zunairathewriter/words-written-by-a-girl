@@ -1,0 +1,73 @@
+/* ===== Page ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d8cbc4;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ===== Main Container ===== */
+
+.container {
+    text-align: center;
+    max-width: 850px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+/* ===== Title ===== */
+
+h1 {
+    color: #4c3228;
+    font-size: 60px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* ===== Subtitle ===== */
+
+.subtitle {
+    color: #765341;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+/* ===== Welcome Text ===== */
+
+.welcome {
+    margin-bottom: 50px;
+}
+
+.welcome p {
+    color: #4c3228;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* ===== Button ===== */
+
+button {
+    background-color: #dca89f;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #4c3228;
+    transform: scale(1.05);
+}
+
+/* ===== Highlight Selected Text ===== */
+
+::selection {
+    background: #dca89f;
+    color: white;
+}
