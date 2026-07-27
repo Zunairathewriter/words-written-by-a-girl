@@ -1,12 +1,12 @@
 /* ===== Page ===== */
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: #d8cbc4;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
+    text-align: center;
+    margin-top: 100px;
+    color: #4c3228;
 }
-
 /* ===== Main Container ===== */
 
 .container {
