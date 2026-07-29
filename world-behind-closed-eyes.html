@@ -261,33 +261,35 @@ Remove my highlights
 
 const highlightButton = document.getElementById("highlightButton");
 const removeHighlightButton = document.getElementById("removeHighlightButton");
-
 highlightButton.addEventListener("click", function () {
 
     const selection = window.getSelection();
 
-    if (selection.rangeCount > 0 && selection.toString().trim() !== "") {
+    if (!selection.rangeCount || selection.toString().trim() === "") return;
 
-        const range = selection.getRangeAt(0);
+    const range = selection.getRangeAt(0);
 
-        const span = document.createElement("span");
-        span.className = "user-highlight";
+    const span = document.createElement("span");
+    span.className = "user-highlight";
 
-        try {
+    try {
 
-            range.surroundContents(span);
-            selection.removeAllRanges();
+        range.surroundContents(span);
 
-        } catch {
+        localStorage.setItem(
+            "worldBehindClosedEyesHighlights",
+            document.querySelector(".story").innerHTML
+        );
 
-            alert("Please select only a small part of one paragraph.");
+        selection.removeAllRanges();
 
-        }
+    } catch {
+
+        alert("Please select text from a single paragraph.");
 
     }
 
 });
-
 removeHighlightButton.addEventListener("click", function () {
 
     document.querySelectorAll(".user-highlight").forEach(function (highlight) {
@@ -301,6 +303,8 @@ removeHighlightButton.addEventListener("click", function () {
         parent.removeChild(highlight);
 
     });
+
+    localStorage.removeItem("worldBehindClosedEyesHighlights");
 
 });
 
