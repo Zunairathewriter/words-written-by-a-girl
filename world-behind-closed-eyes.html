@@ -258,7 +258,14 @@ Remove my highlights
 </main>
 
 <script>
+const savedHighlights = localStorage.getItem("worldBehindClosedEyesHighlights");
 
+if (savedHighlights) {
+
+    document.querySelector(".story").innerHTML = savedHighlights;
+
+}
+    
 const highlightButton = document.getElementById("highlightButton");
 const removeHighlightButton = document.getElementById("removeHighlightButton");
 highlightButton.addEventListener("click", function () {
