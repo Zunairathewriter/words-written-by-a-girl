@@ -291,8 +291,8 @@ highlightButton.addEventListener("click", function () {
         selection.removeAllRanges();
 
     } catch {
-
-        alert("Please select text from a single paragraph.");
+        
+console.log("Invalid selection.");
 
     }
 
@@ -310,6 +310,15 @@ removeHighlightButton.addEventListener("click", function () {
         parent.removeChild(highlight);
 
     });
+
+    localStorage.removeItem("worldBehindClosedEyesHighlights");
+
+    localStorage.setItem(
+        "worldBehindClosedEyesHighlights",
+        document.querySelector(".story").innerHTML
+    );
+
+});
 
     localStorage.removeItem("worldBehindClosedEyesHighlights");
 
