@@ -132,10 +132,13 @@ document.getElementById("highlightButton").onclick=()=>{
  }catch(e){alert("Please highlight within one paragraph.");}
 };
 document.getElementById("removeHighlightButton").onclick=()=>{
+
  story.querySelectorAll(".user-highlight").forEach(h=>{
    h.replaceWith(...h.childNodes);
  });
- localStorage.removeItem(KEY);
+
+ localStorage.setItem(KEY, story.innerHTML);
+
 };
 </script>
 </body>
