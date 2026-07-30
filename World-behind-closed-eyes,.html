@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The World Behind Closed Eyes</title>
+<style>
+body{margin:0;padding:60px 20px;background:#d8cbc4;color:#2d241e;font-family:Georgia,"Times New Roman",serif}
+.book-page{max-width:1200px;margin:auto}
+h1{text-align:center;font-size:52px;color:#4c3228}
+.subtitle{text-align:center;font-style:italic;color:#765341;margin-bottom:50px}
+.reading-layout{display:flex;gap:40px;align-items:flex-start}
+.highlight-tools{position:sticky;top:80px;width:220px;display:flex;flex-direction:column;gap:15px}
+.highlight-tools button{background:#dca89f;color:#fff;border:none;padding:14px;border-radius:30px;cursor:pointer}
+.story{flex:1;font-size:21px;line-height:1.9}
+.user-highlight{background:#e7bd72;border-radius:3px;padding:1px 2px}
+.back{display:inline-block;margin-top:50px;padding:14px 24px;background:#5a4030;color:#fff;text-decoration:none;border-radius:6px}
+@media(max-width:900px){.reading-layout{flex-direction:column}.highlight-tools{position:static;width:100%}}
+</style>
+</head>
+<body>
+<main class="book-page">
+<h1>The World Behind Closed Eyes</h1>
+<p class="subtitle">There's a whole universe behind closed eyes, my dear.</p>
+<div class="reading-layout">
+<div class="highlight-tools">
+<button id="highlightButton">Highlight selected text</button>
+<button id="removeHighlightButton">Remove my highlights</button>
+</div>
+<article class="story">
+<p><strong>Replace this article section by pasting the story paragraphs from your current file.</strong></p>
+<p>This template fixes the broken JavaScript and keeps the left sidebar layout.</p>
+</article>
+</div>
+<a class="back" href="stories.html">← Back to Stories</a>
+</main>
+<script>
+const story=document.querySelector(".story");
+const KEY="worldBehindClosedEyesHighlights";
+const saved=localStorage.getItem(KEY);
+if(saved) story.innerHTML=saved;
+document.getElementById("highlightButton").onclick=()=>{
+ const s=window.getSelection();
+ if(!s.rangeCount||!s.toString().trim()) return;
+ const r=s.getRangeAt(0);
+ const span=document.createElement("span");
+ span.className="user-highlight";
+ try{
+   const frag=r.extractContents();
+   span.appendChild(frag);
+   r.insertNode(span);
+   s.removeAllRanges();
+   localStorage.setItem(KEY,story.innerHTML);
+ }catch(e){alert("Please highlight within one paragraph.");}
+};
+document.getElementById("removeHighlightButton").onclick=()=>{
+ story.querySelectorAll(".user-highlight").forEach(h=>{
+   h.replaceWith(...h.childNodes);
+ });
+ localStorage.removeItem(KEY);
+};
+</script>
+</body>
+</html>
