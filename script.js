@@ -1,32 +1,29 @@
 // ============================================
-// LINE-BY-LINE HIGHLIGHTING - Click any line!
+// WORD-LEVEL HIGHLIGHTING - Click ANY word!
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Get ALL the lines (paragraphs with class "line")
-    const lines = document.querySelectorAll('.line');
+    // Get ALL individual words
+    const words = document.querySelectorAll('.word');
     
-    // For each line, add a click event
-    lines.forEach(line => {
-        line.addEventListener('click', function() {
-            // Toggle the highlight class on this specific line
-            this.classList.toggle('highlighted-line');
+    // Click any word to highlight it
+    words.forEach(word => {
+        word.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent weird behavior
+            this.classList.toggle('highlighted');
         });
     });
     
-    // Get ALL "Remove All Highlights" buttons
+    // "Remove All" buttons - clears highlights in that story
     const resetButtons = document.querySelectorAll('.reset-story-btn');
     
     resetButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Find the story this button belongs to
             const story = this.closest('.story');
-            // Find all lines in THIS story
-            const linesInStory = story.querySelectorAll('.line');
-            // Remove highlight from all lines in this story
-            linesInStory.forEach(line => {
-                line.classList.remove('highlighted-line');
+            const wordsInStory = story.querySelectorAll('.word');
+            wordsInStory.forEach(word => {
+                word.classList.remove('highlighted');
             });
         });
     });
