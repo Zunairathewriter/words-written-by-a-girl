@@ -1,30 +1,34 @@
-// Wait for the page to load completely
+// ============================================
+// LINE-BY-LINE HIGHLIGHTING - Click any line!
+// ============================================
+
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Get ALL highlight buttons
-    const highlightButtons = document.querySelectorAll('.highlight-btn');
+    // Get ALL the lines (paragraphs with class "line")
+    const lines = document.querySelectorAll('.line');
     
-    // Get ALL reset buttons
-    const resetButtons = document.querySelectorAll('.reset-btn');
-
-    // Add click event to each highlight button
-    highlightButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Find the parent story article
-            const story = this.closest('.story');
-            // Add the 'highlighted' class to it
-            story.classList.add('highlighted');
+    // For each line, add a click event
+    lines.forEach(line => {
+        line.addEventListener('click', function() {
+            // Toggle the highlight class on this specific line
+            this.classList.toggle('highlighted-line');
         });
     });
-
-    // Add click event to each reset button
+    
+    // Get ALL "Remove All Highlights" buttons
+    const resetButtons = document.querySelectorAll('.reset-story-btn');
+    
     resetButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Find the parent story article
+            // Find the story this button belongs to
             const story = this.closest('.story');
-            // Remove the 'highlighted' class from it
-            story.classList.remove('highlighted');
+            // Find all lines in THIS story
+            const linesInStory = story.querySelectorAll('.line');
+            // Remove highlight from all lines in this story
+            linesInStory.forEach(line => {
+                line.classList.remove('highlighted-line');
+            });
         });
     });
-
+    
 });
