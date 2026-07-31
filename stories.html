@@ -7,55 +7,174 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Words Written by a Girl</h1>
-        <p class="subtitle">Every story begins with a feeling. But mine begins with my thoughts.</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="stories.html">Stories</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>words <span>written</span> by a girl</h1>
+            <p class="subtitle">every story begins with a feeling. but mine begins with my thoughts.</p>
+            <nav>
+                <a href="index.html">home</a>
+                <a href="stories.html">stories</a>
+            </nav>
+        </header>
 
-    <main>
-        <h2>All Stories</h2>
-        <p style="color: #6a4a3a; font-style: italic; margin-bottom: 30px; padding-left: 20px;">
-            ✦ Click any line to highlight it. Click again to remove.
-        </p>
+        <main>
+            <p style="color: #a08679; font-size: 0.85rem; font-style: italic; margin-bottom: 25px; text-align: center; letter-spacing: 1px;">
+                ✧ click any word to hold it close. click again to let it go. ✧
+            </p>
 
-        <!-- STORY 1 -->
-        <article class="story" id="story1">
-            <h3>The World Behind Closed Eyes</h3>
-            <div class="story-content">
-                <p class="line" data-story="story1">There's a whole universe behind closed eyes, my dear.</p>
-                <p class="line" data-story="story1">Close your eyes and see it.</p>
-                <p class="line" data-story="story1">Feel the colors that don't have names.</p>
-                <p class="line" data-story="story1">Hear the silence that speaks louder than words.</p>
-                <p class="line" data-story="story1">Every eyelash is a reminder that you can shut out the noise and find peace within.</p>
-            </div>
-            <button class="reset-story-btn" data-story="story1">Remove All Highlights</button>
-            <p class="hint">✧ Click any line to highlight it</p>
-        </article>
+            <!-- STORY 1 -->
+            <article class="story" id="story1">
+                <h3>The World Behind Closed Eyes</h3>
+                <div class="story-content">
+                    <p>
+                        <span class="word" data-story="story1">There's</span>
+                        <span class="word" data-story="story1">a</span>
+                        <span class="word" data-story="story1">whole</span>
+                        <span class="word" data-story="story1">universe</span>
+                        <span class="word" data-story="story1">behind</span>
+                        <span class="word" data-story="story1">closed</span>
+                        <span class="word" data-story="story1">eyes,</span>
+                        <span class="word" data-story="story1">my</span>
+                        <span class="word" data-story="story1">dear.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story1">Close</span>
+                        <span class="word" data-story="story1">your</span>
+                        <span class="word" data-story="story1">eyes</span>
+                        <span class="word" data-story="story1">and</span>
+                        <span class="word" data-story="story1">see</span>
+                        <span class="word" data-story="story1">it.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story1">Feel</span>
+                        <span class="word" data-story="story1">the</span>
+                        <span class="word" data-story="story1">colors</span>
+                        <span class="word" data-story="story1">that</span>
+                        <span class="word" data-story="story1">don't</span>
+                        <span class="word" data-story="story1">have</span>
+                        <span class="word" data-story="story1">names.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story1">Hear</span>
+                        <span class="word" data-story="story1">the</span>
+                        <span class="word" data-story="story1">silence</span>
+                        <span class="word" data-story="story1">that</span>
+                        <span class="word" data-story="story1">speaks</span>
+                        <span class="word" data-story="story1">louder</span>
+                        <span class="word" data-story="story1">than</span>
+                        <span class="word" data-story="story1">words.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story1">Every</span>
+                        <span class="word" data-story="story1">eyelash</span>
+                        <span class="word" data-story="story1">is</span>
+                        <span class="word" data-story="story1">a</span>
+                        <span class="word" data-story="story1">reminder</span>
+                        <span class="word" data-story="story1">that</span>
+                        <span class="word" data-story="story1">you</span>
+                        <span class="word" data-story="story1">can</span>
+                        <span class="word" data-story="story1">shut</span>
+                        <span class="word" data-story="story1">out</span>
+                        <span class="word" data-story="story1">the</span>
+                        <span class="word" data-story="story1">noise</span>
+                        <span class="word" data-story="story1">and</span>
+                        <span class="word" data-story="story1">find</span>
+                        <span class="word" data-story="story1">peace</span>
+                        <span class="word" data-story="story1">within.</span>
+                    </p>
+                </div>
+                <div class="story-actions">
+                    <button class="reset-story-btn" data-story="story1">remove all highlights</button>
+                </div>
+                <p class="hint">click any word to highlight it</p>
+            </article>
 
-        <hr>
+            <hr>
 
-        <!-- STORY 2 -->
-        <article class="story" id="story2">
-            <h3>Your Stranger</h3>
-            <div class="story-content">
-                <p class="line" data-story="story2">You hold me for once and for all, my love.</p>
-                <p class="line" data-story="story2">In a crowd of familiar faces, you were the stranger who felt like home.</p>
-                <p class="line" data-story="story2">One touch, one glance, and the universe rearranged itself around us.</p>
-                <p class="line" data-story="story2">Now I search for you in every room, every street, every heartbeat.</p>
-                <p class="line" data-story="story2">And I find you — in the spaces between my thoughts.</p>
-            </div>
-            <button class="reset-story-btn" data-story="story2">Remove All Highlights</button>
-            <p class="hint">✧ Click any line to highlight it</p>
-        </article>
-    </main>
+            <!-- STORY 2 -->
+            <article class="story" id="story2">
+                <h3>Your Stranger</h3>
+                <div class="story-content">
+                    <p>
+                        <span class="word" data-story="story2">You</span>
+                        <span class="word" data-story="story2">hold</span>
+                        <span class="word" data-story="story2">me</span>
+                        <span class="word" data-story="story2">for</span>
+                        <span class="word" data-story="story2">once</span>
+                        <span class="word" data-story="story2">and</span>
+                        <span class="word" data-story="story2">for</span>
+                        <span class="word" data-story="story2">all,</span>
+                        <span class="word" data-story="story2">my</span>
+                        <span class="word" data-story="story2">love.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story2">In</span>
+                        <span class="word" data-story="story2">a</span>
+                        <span class="word" data-story="story2">crowd</span>
+                        <span class="word" data-story="story2">of</span>
+                        <span class="word" data-story="story2">familiar</span>
+                        <span class="word" data-story="story2">faces,</span>
+                        <span class="word" data-story="story2">you</span>
+                        <span class="word" data-story="story2">were</span>
+                        <span class="word" data-story="story2">the</span>
+                        <span class="word" data-story="story2">stranger</span>
+                        <span class="word" data-story="story2">who</span>
+                        <span class="word" data-story="story2">felt</span>
+                        <span class="word" data-story="story2">like</span>
+                        <span class="word" data-story="story2">home.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story2">One</span>
+                        <span class="word" data-story="story2">touch,</span>
+                        <span class="word" data-story="story2">one</span>
+                        <span class="word" data-story="story2">glance,</span>
+                        <span class="word" data-story="story2">and</span>
+                        <span class="word" data-story="story2">the</span>
+                        <span class="word" data-story="story2">universe</span>
+                        <span class="word" data-story="story2">rearranged</span>
+                        <span class="word" data-story="story2">itself</span>
+                        <span class="word" data-story="story2">around</span>
+                        <span class="word" data-story="story2">us.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story2">Now</span>
+                        <span class="word" data-story="story2">I</span>
+                        <span class="word" data-story="story2">search</span>
+                        <span class="word" data-story="story2">for</span>
+                        <span class="word" data-story="story2">you</span>
+                        <span class="word" data-story="story2">in</span>
+                        <span class="word" data-story="story2">every</span>
+                        <span class="word" data-story="story2">room,</span>
+                        <span class="word" data-story="story2">every</span>
+                        <span class="word" data-story="story2">street,</span>
+                        <span class="word" data-story="story2">every</span>
+                        <span class="word" data-story="story2">heartbeat.</span>
+                    </p>
+                    <p>
+                        <span class="word" data-story="story2">And</span>
+                        <span class="word" data-story="story2">I</span>
+                        <span class="word" data-story="story2">find</span>
+                        <span class="word" data-story="story2">you</span>
+                        <span class="word" data-story="story2">—</span>
+                        <span class="word" data-story="story2">in</span>
+                        <span class="word" data-story="story2">the</span>
+                        <span class="word" data-story="story2">spaces</span>
+                        <span class="word" data-story="story2">between</span>
+                        <span class="word" data-story="story2">my</span>
+                        <span class="word" data-story="story2">thoughts.</span>
+                    </p>
+                </div>
+                <div class="story-actions">
+                    <button class="reset-story-btn" data-story="story2">remove all highlights</button>
+                </div>
+                <p class="hint">click any word to highlight it</p>
+            </article>
+        </main>
 
-    <footer>
-        <p>&copy; 2026 Words Written by a Girl</p>
-    </footer>
+        <footer>
+            <p>words written by a girl</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
