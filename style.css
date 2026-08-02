@@ -1,323 +1,87 @@
 /* ============================================
-   WORDS WRITTEN BY A GIRL - Warm Brown Design
-   Based on your screenshots
+   STICKY HIGHLIGHT CONTROLS - Follows you!
    ============================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background: #d8cbc4;  /* Warm beige background */
-    color: #3d251e;
-    line-height: 1.8;
-    padding: 40px 20px;
+.sticky-controls {
+    position: sticky;
+    top: 20px;
     display: flex;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-/* ============================================
-   CONTAINER - Warm card
-   ============================================ */
-.container {
-    max-width: 720px;
-    width: 100%;
-    background: #f5ede8;  /* Warm cream, not white */
-    padding: 30px 40px 20px;
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(61, 37, 30, 0.08);
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 12px;
+    background: #f5ede8;
     border: 1px solid #e8ddd6;
-}
-
-/* ============================================
-   HEADER
-   ============================================ */
-header {
-    text-align: center;
-    padding-bottom: 25px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #e8ddd6;
-}
-
-header h1 {
-    font-size: 2.2rem;
-    font-weight: 300;
-    color: #3d251e;
-    letter-spacing: 2px;
-    font-family: 'Georgia', serif;
-}
-
-.subtitle {
-    font-style: italic;
-    color: #765341;
-    font-size: 1rem;
-    margin-top: 6px;
-    letter-spacing: 0.5px;
-}
-
-/* ============================================
-   HOME PAGE - Welcome
-   ============================================ */
-.home-page {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.welcome-message {
-    padding: 30px 0;
-}
-
-.welcome-message p {
-    font-size: 1.1rem;
-    color: #3d251e;
-    line-height: 2;
-}
-
-.enter-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 40px;
-    background: #8b6c5c;
-    color: #f5ede8;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    font-family: 'Georgia', serif;
-    border: none;
-}
-
-.enter-button:hover {
-    background: #6a4a3a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(107, 74, 58, 0.25);
-}
-
-/* ============================================
-   STORY PREVIEWS - Stories Page
-   ============================================ */
-.story-preview {
-    margin: 35px 0;
-    padding: 10px 0;
-}
-
-.story-preview h2 {
-    font-size: 1.7rem;
-    font-weight: 300;
-    color: #3d251e;
-    font-family: 'Georgia', serif;
-    margin-bottom: 2px;
-    letter-spacing: 0.5px;
-}
-
-.preview-text {
-    font-size: 1rem;
-    color: #765341;
-    font-style: italic;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(61, 37, 30, 0.08);
+    z-index: 100;
+    width: auto;
+    min-width: 160px;
+    float: left;
+    margin-right: 20px;
     margin-bottom: 10px;
 }
 
-/* ============================================
-   STEP INSIDE - Looks like a BUTTON!
-   ============================================ */
-.step-inside {
-    display: inline-block;
-    padding: 8px 28px;
-    background: #d8cbc4;
-    color: #3d251e;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-style: italic;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    font-family: 'Georgia', serif;
-    border: 1px solid #c4b8ae;
-}
-
-.step-inside:hover {
-    background: #c4b8ae;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(61, 37, 30, 0.1);
-}
-
-/* ============================================
-   FULL STORY PAGE
-   ============================================ */
-.story-page {
-    padding: 5px 0;
-}
-
-.full-story {
-    padding: 5px 0;
-}
-
-.story-title {
-    font-size: 2rem;
-    font-weight: 300;
-    color: #3d251e;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    margin-bottom: 2px;
-    letter-spacing: 1px;
-}
-
-.story-subtitle {
-    text-align: center;
-    color: #765341;
-    font-size: 1rem;
-    margin-bottom: 25px;
-    font-style: italic;
-}
-
-/* Story content - the actual words */
-.story-content {
-    margin: 15px 0 20px;
-}
-
-.story-content p {
-    font-size: 1.05rem;
-    color: #3d251e;
-    line-height: 2;
-    margin-bottom: 16px;
-    padding: 2px 0;
-}
-
-/* ============================================
-   HIGHLIGHT CONTROLS - LEFT SIDE!
-   ============================================ */
-.highlight-controls {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 20px 0 15px;
-    padding-top: 18px;
-    border-top: 1px solid #e8ddd6;
-    justify-content: flex-start;  /* LEFT SIDE */
-}
-
-.highlight-controls button {
-    padding: 8px 22px;
+.sticky-controls button {
+    padding: 10px 16px;
     border: 1px solid #c4b8ae;
     border-radius: 30px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Georgia', serif;
     letter-spacing: 0.5px;
+    width: 100%;
+    white-space: nowrap;
 }
 
-#highlightBtn {
+.sticky-controls #highlightBtn {
     background: #d8cbc4;
     border-color: #c4b8ae;
     color: #3d251e;
 }
 
-#highlightBtn:hover {
+.sticky-controls #highlightBtn:hover {
     background: #c4b8ae;
     transform: translateY(-2px);
 }
 
-#removeHighlightsBtn {
+.sticky-controls #removeHighlightsBtn {
     background: transparent;
     border-color: #c4b8ae;
     color: #5a4a3a;
 }
 
-#removeHighlightsBtn:hover {
+.sticky-controls #removeHighlightsBtn:hover {
     background: #e8ddd6;
     transform: translateY(-2px);
 }
 
 /* ============================================
-   BACK LINK
+   FIX FOR MOBILE - Buttons go to top
    ============================================ */
-.back-link {
-    display: inline-block;
-    color: #765341;
-    text-decoration: none;
-    font-size: 0.95rem;
-    margin-top: 8px;
-    transition: all 0.3s ease;
-    font-style: italic;
-}
-
-.back-link:hover {
-    color: #3d251e;
-}
-
-/* ============================================
-   HIGHLIGHTED TEXT
-   ============================================ */
-::selection {
-    background: #d8cbc4;
-    color: #3d251e;
-}
-
-.highlighted-text {
-    background-color: #d8cbc4;
-    padding: 2px 4px;
-    border-radius: 3px;
-    box-shadow: 0 1px 6px rgba(139, 108, 92, 0.1);
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-footer {
-    text-align: center;
-    padding-top: 25px;
-    margin-top: 30px;
-    color: #a08679;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    border-top: 1px solid #e8ddd6;
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 600px) {
-    body {
-        padding: 15px 12px;
-    }
-    
-    .container {
-        padding: 18px 16px 15px;
-        border-radius: 12px;
-    }
-    
-    header h1 {
-        font-size: 1.6rem;
-    }
-    
-    .story-preview h2 {
-        font-size: 1.3rem;
-    }
-    
-    .story-title {
-        font-size: 1.4rem;
-    }
-    
-    .story-content p {
-        font-size: 0.95rem;
-    }
-    
-    .highlight-controls {
-        flex-direction: column;
-    }
-    
-    .highlight-controls button {
+@media (max-width: 768px) {
+    .sticky-controls {
+        position: sticky;
+        top: 10px;
+        float: none;
         width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+        padding: 12px;
+        min-width: unset;
     }
     
-    .enter-button {
-        padding: 10px 30px;
-        font-size: 0.9rem;
+    .sticky-controls button {
+        width: auto;
+        white-space: normal;
+        padding: 8px 16px;
+        font-size: 0.75rem;
     }
+}
+
+/* Clear fix for floated element */
+.full-story {
+    overflow: hidden;
 }
