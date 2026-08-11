@@ -439,3 +439,34 @@ footer {
         font-size: 0.8rem;
     }
 }
+/* ============================================
+   ABOUT PAGE - PROFILE PICTURE
+   ============================================ */
+
+.about-image {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.about-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;  /* Makes it a perfect circle */
+    object-fit: cover;   /* Crops the image nicely */
+    border: 4px solid #c4b8ae;
+    box-shadow: 0 4px 20px rgba(61, 37, 30, 0.12);
+    transition: all 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 30px rgba(61, 37, 30, 0.18);
+}
+
+/* Responsive - smaller on mobile */
+@media (max-width: 600px) {
+    .about-image img {
+        width: 140px;
+        height: 140px;
+    }
+}
