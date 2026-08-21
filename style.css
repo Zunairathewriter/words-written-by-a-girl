@@ -469,4 +469,26 @@ footer {
         width: 140px;
         height: 140px;
     }
+}/* ============================================
+   SITE LOGO
+   ============================================ */
+
+.site-logo {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    transition: all 0.3s ease;
+}
+
+.site-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+/* Make logo smaller on mobile */
+@media (max-width: 600px) {
+    .site-logo {
+        max-width: 180px;
+    }
 }
